@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="logInViewModel"
+            type="com.dongkeun.toyproject.viewmodel.LogInViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logIn_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_btn_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".68" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_id_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_pw_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".48" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_checkBox_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottomTextBtns_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".8" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_id_top"
+            android:scaleType="fitCenter"
+            android:scaleX=".7"
+            android:scaleY=".7"
+            app:srcCompat="@drawable/ic_camera_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintBottom_toTopOf="@id/guideline_id_top"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/oleo_script_swash_caps_bold"
+            android:textColor="@color/black"
+            android:text="@string/app_name"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idInput"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@id/guideline_id_top"
+            app:layout_constraintWidth_percent=".5"
+            app:layout_constraintHeight_percent=".1"
+            android:hint="계정 입력"
+            android:inputType="text"
+            android:text="@={logInViewModel._idInput}"
+            style="@style/text_input" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="@id/idInput"
+            app:layout_constraintBottom_toBottomOf="@id/idInput"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/standard_content_text"
+            android:text="ID" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pwInput"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@id/guideline_pw_top"
+            app:layout_constraintWidth_percent=".5"
+            app:layout_constraintHeight_percent=".1"
+            android:hint="비밀번호 입력"
+            android:inputType="textPassword"
+            android:text="@={logInViewModel._pwInput}"
+            style="@style/text_input" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="@id/pwInput"
+            app:layout_constraintBottom_toBottomOf="@id/pwInput"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/standard_content_text"
+            android:text="PW" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/save_id_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="@id/guideline_checkBox_top"
+            android:text="ID 기억하기"
+            android:textSize="@dimen/standard_detail_text"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/auto_signIn_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@id/guideline_checkBox_top"
+            android:text="자동 로그인"
+            android:textSize="@dimen/standard_detail_text"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logIn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@id/guideline_btn_top"
+            app:layout_constraintHeight_percent=".1"
+            android:backgroundTint="@color/beige"
+            android:onClick="@{()->logInViewModel.logIn()}"
+            android:textSize="@dimen/standard_content_text"
+            android:text="Log In" />
+
+        <TextView
+            android:id="@+id/signUp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="@id/guideline_bottomTextBtns_top"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            android:onClick="@{()->logInViewModel.toSignUpPage()}"
+            android:textSize="@dimen/standard_content_text"
+            android:text="회원가입" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

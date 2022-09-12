@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/list_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="설정"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/list_more"
+        android:icon="@drawable/ic_baseline_more_vert"
+        android:title="더보기"
+        app:showAsAction="ifRoom|withText"/>
+</menu>

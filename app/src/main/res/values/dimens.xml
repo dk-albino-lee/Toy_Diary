@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_padding">3dp</dimen>
+    <dimen name="list_spacing">6dp</dimen>
+    <dimen name="standard_desc_text">11sp</dimen>
+    <dimen name="standard_detail_text">13sp</dimen>
+    <dimen name="standard_content_text">14sp</dimen>
+    <dimen name="standard_input_text">16sp</dimen>
+    <dimen name="standard_title_text">20sp</dimen>
+</resources>

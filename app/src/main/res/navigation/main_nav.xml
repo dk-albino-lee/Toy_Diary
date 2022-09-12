@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.dongkeun.toyproject.ui.LogInFragment"
+        android:label="LogInFragment" >
+        <action
+            android:id="@+id/login_to_list"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/login_to_signup"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.dongkeun.toyproject.ui.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/list_to_login"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/list_to_detail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.dongkeun.toyproject.ui.DetailFragment"
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/detail_to_list"
+            app:destination="@id/listFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="diaryId"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.dongkeun.toyproject.ui.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/signup_to_login"
+            app:destination="@id/logInFragment" />
+    </fragment>
+</navigation>

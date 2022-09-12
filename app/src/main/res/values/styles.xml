@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_input">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/standard_input_text</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/standard_title_text</item>
+        <item name="android:textColor">@color/dark_green</item>
+    </style>
+
+    <style name="icon_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/standard_detail_text</item>
+        <item name="android:textColor">@color/dark_green</item>
+    </style>
+</resources>
